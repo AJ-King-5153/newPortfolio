@@ -19,7 +19,7 @@ export default function ProjectsPage() {
             date="Dec. 2024 – Feb. 2025"
             description={`Developed a personal portfolio website showcasing my skills, projects, and experience. Its Built with Next.js and React for a modern, fast user experienceStyled using Tailwind CSS and Shadcn UI components for a clean designImplemented it with TypeScript for type safety and better code quality. Created a contact form with client side validation.Optimized for performance and SEO`}
             technologies={["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn UI", "Vercel"]}
-            image="/placeholder.svg?height=400&width=600"
+            image="/placeholder.svg"
             githubLink="https://github.com/AJ-King-5153/portfolio"
           />
 
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
             date="Oct. 2024 – Jan. 2025"
             description="Created a sophisticated drone simulation system modeling the University of Minnesota campus. Utilized design patterns such as Factory, Decorator, and Singleton to ensure clean, maintainable code. Collaborated in an Agile environment with daily stand-ups and sprint planning to ensure proper development. Implemented pathfinding algorithms for autonomous drone movement, allowing for efficient navigation around campus buildings and obstacles. Used Docker for containerized deployment and testing, ensuring consistent behavior across different environments."
             technologies={["C++", "Docker", "Design Patterns", "Agile", "Pathfinding Algorithms"]}
-            image="/DroneSim.png?height=400&width=600"
+            image="/DroneSim.png"
             liveLink="https://docs.google.com/document/d/1CSOGmGkqWsGJTfF7eSvpBfzbQT_IJhROjhO6wBSmrTc/edit?usp=sharing"
           />
 
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
             date="Jan. 2025 – April 2025"
             description="Built and evaluated clustering models like KMeans and DBSCAN using PCA to segment customers based on purchasing behavior and demographics. Evaluated clustering performance using Silhouette Score and Davies Bouldin Index to assess model cohesion and separation. Visualized cluster separation in 2D and interpreted results to inform targeted marketing strategies. Compared algorithm performance with metrics to select the most reliable model for real-world deployment."
             technologies={["Python", "Scikit-learn", "KMeans", "PCA", "EDA", "DBSCAN", "Data Visualization"]}
-            image="/CustomerSeg.png?height=400&width=600"
+            image="/CustomerSeg.png"
           />
         </div>
       </div>
