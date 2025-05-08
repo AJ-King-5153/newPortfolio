@@ -31,7 +31,7 @@ export default function AboutPage() {
 
               <div className="space-y-2">
                 <p>
-                  <span className="font-medium">GPA:</span> 3.5 - Dean's List x4
+                  <span className="font-medium">GPA:</span> 3.5 - Deans List x4
                 </p>
                 <div>
                   <p className="font-medium">Relevant Coursework:</p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-medium">Early Work Experience</h3>
                   <p className="text-slate-600">2020 – 2023</p>
                 </div>
-                <p className="text-slate-700 mb-3">City of Eagan & Jersey Mike's Subs, Eagan, MN</p>
+                <p className="text-slate-700 mb-3">City of Eagan & Jersey Mikes Subs, Eagan, MN</p>
                 <ul className="list-disc list-inside space-y-1 text-slate-600">
                   <li>
                     Maintained and improved park grounds across 1,370 acres, enhancing the experience for daily visitors

@@ -9,34 +9,17 @@ import Link from "next/link"
 import { useForm } from "react-hook-form"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const onSubmit = async () => {
     setIsSubmitting(true)
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setSubmitStatus({ success: true, message: "Thank you for your message! I'll get back to you soon." })
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    } catch (error) {
+    } catch {
       setSubmitStatus({ success: false, message: "There was an error sending your message. Please try again." })
     } finally {
       setIsSubmitting(false)
@@ -118,19 +101,17 @@ export default function ContactPage() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit(handleSubmitForm)} className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-1">
                   Name
                 </label>
                 <Input
                   id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
+                  {...register("name", { required: true })}
                   placeholder="Your name"
                 />
+                {errors.name && <span className="text-red-500 text-sm">Name is required</span>}
               </div>
 
               <div>
@@ -139,13 +120,11 @@ export default function ContactPage() {
                 </label>
                 <Input
                   id="email"
-                  name="email"
                   type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
+                  {...register("email", { required: true })}
                   placeholder="Your email address"
                 />
+                {errors.email && <span className="text-red-500 text-sm">Email is required</span>}
               </div>
 
               <div>
@@ -154,12 +133,10 @@ export default function ContactPage() {
                 </label>
                 <Input
                   id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
+                  {...register("subject", { required: true })}
                   placeholder="Subject of your message"
                 />
+                {errors.subject && <span className="text-red-500 text-sm">Subject is required</span>}
               </div>
 
               <div>
@@ -168,13 +145,11 @@ export default function ContactPage() {
                 </label>
                 <Textarea
                   id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
+                  {...register("message", { required: true })}
                   placeholder="Your message"
                   rows={5}
                 />
+                {errors.message && <span className="text-red-500 text-sm">Message is required</span>}
               </div>
 
               <Button type="submit" className="w-full" disabled={isSubmitting}>
