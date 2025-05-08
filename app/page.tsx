@@ -33,7 +33,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">Allan (AJ) King</h1>
               <p className="text-xl md:text-2xl text-slate-200">Computer Science Student</p>
               <p className="text-slate-300 max-w-[600px]">
-                Passionate about building innovative solutions with modern tech and problem solving. Currently pursuing a Bachelor's
+                Passionate about building innovative solutions with modern tech and problem solving. Currently pursuing a Bachelor&apos;s
                 degree in Computer Science at the University of Minnesota.
               </p>
               <div className="flex flex-wrap gap-3">

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, Mail, Phone } from "lucide-react"
 import Link from "next/link"
+import { useForm } from "react-hook-form"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,8 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null)
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({
@@ -26,7 +29,7 @@ export default function ContactPage() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     try {
@@ -48,7 +51,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="text-lg mb-8">
-              I'm always open to any inquiries. Feel free to reach out using the contact form or through any of the channels below.
+              I&apos;m always open to any inquiries. Feel free to reach out using the contact form or through any of the channels below.
             </p>
 
             <div className="space-y-6">
@@ -115,7 +118,7 @@ export default function ContactPage() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit(handleSubmitForm)} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-1">
                   Name

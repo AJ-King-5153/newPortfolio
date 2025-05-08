@@ -9,7 +9,7 @@ export default function ProjectsPage() {
       <div className="container px-4 md:px-6">
         <h1 className="text-4xl font-bold mb-8">Projects</h1>
         <p className="text-lg mb-12 max-w-3xl">
-          Here are some of the key projects I've worked on, showcasing my skills in various technologies and
+          Here&apos;s some of the key projects I&apos;ve worked on, showcasing my skills in various technologies and
           problem solving approaches.
         </p>
 
