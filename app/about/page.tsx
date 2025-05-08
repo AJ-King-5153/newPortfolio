@@ -9,11 +9,11 @@ export default function AboutPage() {
 
           <section className="mb-12">
             <p className="text-lg mb-4">
-              I'm Allan (AJ) King, a Computer Science student at the University of Minnesota, Twin Cities, passionate
-              about building innovative solutions with modern tech stacks. I'm constantly expanding my skills and knowledge in the tech industry.
+              I&apos;m Allan (AJ) King, a Computer Science student at the University of Minnesota, Twin Cities, passionate
+              about building innovative solutions with modern tech stacks. I&apos;m constantly expanding my skills and knowledge in the tech industry.
             </p>
             <p className="text-lg">
-              When I'm not coding, you can find me participating in the Social Coding Club, competing with the Big 10
+              When I&apos;m not coding, you can find me participating in the Social Coding Club, competing with the Big 10
               Esports team, or playing pickle ball. I believe in continuous learning and applying my skills to solve
               real world problems.
             </p>

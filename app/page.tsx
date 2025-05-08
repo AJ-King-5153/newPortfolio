@@ -65,7 +65,13 @@ export default function Home() {
             </div>
             <div className="flex-shrink-0">
               <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden border-4 border-white/20">
-                <img src="/headshot.JPG" alt="Allan King" className="object-cover w-full h-full" />
+                <Image 
+                  src="/headshot.JPG" 
+                  alt="Allan King" 
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>

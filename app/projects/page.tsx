@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function ProjectsPage() {
   return (
@@ -59,7 +60,13 @@ function ProjectCard({ title, date, description, technologies, image, githubLink
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-200">
       <div className="md:flex">
         <div className="md:w-1/3">
-          <img src={image || "/placeholder.svg"} alt={title} className="h-full w-full object-cover" />
+          <Image 
+            src={image || "/placeholder.svg"} 
+            alt={title} 
+            width={600}
+            height={400}
+            className="h-full w-full object-cover"
+          />
         </div>
         <div className="p-6 md:w-2/3">
           <div className="flex justify-between items-start mb-2">
